@@ -1,0 +1,37 @@
+<app-nav></app-nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <button (click)="toggleEditor('income')">Add Income</button>
+      <button (click)="toggleEditor('expenditure')">Add Expenditure</button>
+      <app-income *ngIf="showIncome"></app-income>
+      <app-expenditure *ngIf="showExpenditure"></app-expenditure>
+    </div>
+    <div class="col-md-6">
+       <table border="1">
+          <thead>
+            <th>Income</th>
+            <th>Expenditure</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+                <td>Total Income: </td>
+                <td>Total Expenditure: </td>
+              </tr>
+          </tbody>
+       </table>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <h3>Income Expenditure Statement:</h3>
+      <p>Your Total Expenditure was <span></span></p>
+    </div>
+  </footer>
+</div>
+
+<router-outlet></router-outlet>

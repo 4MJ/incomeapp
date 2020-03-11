@@ -1,0 +1,24 @@
+<div class="container p-4">
+        <form action="" [formGroup]="myForm" class="form-group" (ngSubmit)="onSubmit">
+            <fieldset>
+                <legend>Add Expenditure</legend>
+                <div class="form-group">
+                    <label for="ammount">Ammount</label>
+                    <input type="number" ngmodel="expAmmount" class="form-control" name="ammount" id="ammount" formControlName="ammount">
+                </div>
+                <div class="form-group">
+                    <label for="item">Item</label>
+                    <input type="text" class="form-control" name="item" id="item" formControlName="source">
+                </div>
+                <div class="form-group">
+                    <label for="details">Details</label>
+                    <textarea name="details" id="" cols="30" rows="10" class="form-control" id="details" formControlName="details"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date/Time</label>
+                    <input type="date" name="date" class="form-control" formControlName="date" id="date">
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
